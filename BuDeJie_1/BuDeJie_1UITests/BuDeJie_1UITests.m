@@ -1,18 +1,18 @@
 //
-//  _____UITests.m
-//  百思不得姐UITests
+//  BuDeJie_1UITests.m
+//  BuDeJie_1UITests
 //
-//  Created by admin on 16/10/25.
-//  Copyright © 2016年 admin. All rights reserved.
+//  Created by admin on 16/10/26.
+//  Copyright © 2016年 冷洪林. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface _____UITests : XCTestCase
+@interface BuDeJie_1UITests : XCTestCase
 
 @end
 
-@implementation _____UITests
+@implementation BuDeJie_1UITests
 
 - (void)setUp {
     [super setUp];

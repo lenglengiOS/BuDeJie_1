@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LHLFriendTrendViewController.h
 //  BuDeJie_1
 //
 //  Created by admin on 16/10/26.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LHLFriendTrendViewController : UIViewController
 
 @end
-

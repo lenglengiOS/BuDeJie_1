@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  LHLTabBarController.h
 //  BuDeJie_1
 //
 //  Created by admin on 16/10/26.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface LHLTabBarController : UITabBarController
 
 @end
-

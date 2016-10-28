@@ -15,6 +15,16 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = LHLRadomColor
+    [self setUpNavBar];
+}
+
+- (void)setUpNavBar
+{
+    // 左边的按钮
+    UIBarButtonItem *leftItem = [UIBarButtonItem itemWitnImage:[UIImage imageNamed:@"MainTagSubIcon"] heighlightImage:[UIImage imageNamed:@"MainTagSubIconClick"] target:nil action:nil];
+    self.navigationItem.leftBarButtonItem = leftItem;
+    // 中间的文字
+    self.navigationItem.title = @"撸趣内涵";
 }
 
 @end

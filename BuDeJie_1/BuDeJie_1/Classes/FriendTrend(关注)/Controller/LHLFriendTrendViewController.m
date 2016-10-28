@@ -15,6 +15,15 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = LHLRadomColor
+    [self setUpNavBar];
 }
 
+- (void)setUpNavBar
+{
+    // 左边的按钮
+    UIBarButtonItem *leftItem = [UIBarButtonItem itemWitnImage:[UIImage imageNamed:@"friendsRecommentIcon"] heighlightImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] target:nil action:nil];
+    self.navigationItem.leftBarButtonItem = leftItem;
+    // 中间的文字
+    self.navigationItem.title = @"我的关注";
+}
 @end

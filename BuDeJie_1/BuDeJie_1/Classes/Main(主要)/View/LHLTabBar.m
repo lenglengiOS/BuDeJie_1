@@ -48,10 +48,19 @@
             tabBarButton.frame = CGRectMake(btnW * i, 0, btnW, btnH);
             i++;
         }
+        // 隐藏tabBar黑线
+        NSString *subFrames =  NSStringFromCGRect(tabBarButton.frame);
+        NSString *blackLine = @"{{0, -0.5}, {375, 0.5}}";
+        if ([subFrames isEqualToString:blackLine]) {
+            tabBarButton.hidden = YES;
+        }
         
     }
     // plusButton
     self.plusButton.center = CGPointMake(self.lhl_width * 0.5, self.frame.size.height * 0.5);
+
 }
+
+
 
 @end

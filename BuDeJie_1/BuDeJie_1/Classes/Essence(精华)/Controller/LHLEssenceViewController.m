@@ -14,7 +14,7 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = LHLRadomColor;
     
     // 设置导航条按钮
     [self setUpNavBar];

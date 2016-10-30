@@ -8,7 +8,7 @@
 
 #import "LHLNavigationViewController.h"
 
-@interface LHLNavigationViewController ()
+@interface LHLNavigationViewController () <UIGestureRecognizerDelegate>
 
 @end
 
@@ -44,7 +44,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:)];
+    pan.delegate = self;
+    self.interactivePopGestureRecognizer.enabled = NO;
+    [self.view addGestureRecognizer:pan];
+    
+}
+/*
+ <UIScreenEdgePanGestureRecognizer: 0x7f7f98c97430;
+ state = Possible; delaysTouchesBegan = YES;
+ view = <UILayoutContainerView 0x7f7f98f19d00>;
+ target= <(action=handleNavigationTransition:,
+ target=<_UINavigationInteractiveTransition 0x7f7f98c96ee0>)>
+ */
+
+#pragma mark - UIGestureRecognizerDelegate
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    return self.childViewControllers.count > 1;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,14 +70,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
+
+
+
+
+
+
+
+
+

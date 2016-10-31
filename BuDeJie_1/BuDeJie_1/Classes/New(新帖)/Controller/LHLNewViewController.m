@@ -7,6 +7,7 @@
 //
 
 #import "LHLNewViewController.h"
+#import "LHLSubTagViewController.h"
 
 @implementation LHLNewViewController
 
@@ -15,16 +16,34 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = LHLRadomColor
+    // 设置导航条按钮
     [self setUpNavBar];
 }
 
 - (void)setUpNavBar
 {
     // 左边的按钮
-    UIBarButtonItem *leftItem = [UIBarButtonItem itemWitnImage:[UIImage imageNamed:@"MainTagSubIcon"] heighlightImage:[UIImage imageNamed:@"MainTagSubIconClick"] target:nil action:nil];
+    UIBarButtonItem *leftItem = [UIBarButtonItem itemWitnImage:[UIImage imageNamed:@"MainTagSubIcon"] heighlightImage:[UIImage imageNamed:@"MainTagSubIconClick"] target:self action:@selector(subTag)];
     self.navigationItem.leftBarButtonItem = leftItem;
     // 中间的文字
     self.navigationItem.title = @"撸趣内涵";
 }
 
+- (void)subTag
+{
+    LHLSubTagViewController *subTag = [[LHLSubTagViewController alloc] init];
+    [self.navigationController pushViewController:subTag animated:YES];
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+

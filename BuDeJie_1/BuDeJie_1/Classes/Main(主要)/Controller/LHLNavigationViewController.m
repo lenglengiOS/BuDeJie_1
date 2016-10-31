@@ -30,6 +30,7 @@
     
     if (self.childViewControllers.count > 0) { // 非根控制器
         UIBarButtonItem *item = [UIBarButtonItem backItemWitnImage:[UIImage imageNamed:@"navigationButtonReturn"] heighlightImage:[UIImage imageNamed:@"navigationButtonReturnClick"] target:self action:@selector(back) title:@"返回"];
+        viewController.hidesBottomBarWhenPushed = YES;
         viewController.navigationItem.leftBarButtonItem = item;
     }
     

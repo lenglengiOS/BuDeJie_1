@@ -14,7 +14,6 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = LHLRadomColor
     [self setUpNavBar];
 }
 
